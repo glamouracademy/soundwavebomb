@@ -13,6 +13,21 @@
    limitations under the License.
 */
 
+var canvas = document.getElementById( "wavedisplay" );
+
+var doGetSound = function() {
+    var context = new AudioContext(); // Create and Initialize the Audio Context
+    var getSound = new XMLHttpRequest(); // Load the Sound with XMLHttpRequest
+    getSound.open("GET", "http://imreallyawesome.com/awesome/interlude-weirdness-dillyfloop.wav", true); // Path to Audio File
+    getSound.responseType = "arraybuffer"; // Read as Binary Data
+    getSound.onload = function() {
+        context.decodeAudioData(getSound.response, function(buffer) {
+            drawBuffer(canvas.width, canvas.height, canvas.getContext('2d'), buffer.getChannelData(0));
+        });
+    }
+    getSound.send(); // Send the Request and Load the File, give it a moment to load
+};
+
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioContext = new AudioContext();
@@ -38,7 +53,6 @@ function saveAudio() {
 }
 
 function gotBuffers( buffers ) {
-    var canvas = document.getElementById( "wavedisplay" );
 
     drawBuffer( canvas.width, canvas.height, canvas.getContext('2d'), buffers[0] );
 
