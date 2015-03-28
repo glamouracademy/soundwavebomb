@@ -10,6 +10,7 @@ var items = new Array();
         "Put your money where your mouth is",
         "Give your friend a fart",
         "THE ONLY physical manifestation of sound",
+        "Special thank you to Maker Gear",
         "Helping millions still not be able to express themselves",
         "Did I sleep... not?",
         "Printers can print sound now",
