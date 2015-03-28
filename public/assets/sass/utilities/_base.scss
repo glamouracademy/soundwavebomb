@@ -1,0 +1,22 @@
+//Set up base 10________________________________________________________________________
+html {
+  font-size: 16px;
+  font-size: 62.5%;
+  height: 100%;
+  -webkit-text-size-adjust: none;
+
+}
+
+
+//Set up box-sizing
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	height: 100%;
+}

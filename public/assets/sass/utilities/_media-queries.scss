@@ -1,0 +1,33 @@
+// MEDIA QUERIES_________________________________________________________________________________
+
+
+  // Breakpoints
+
+  // Horizontal
+  $bp-small: 40em;
+  $bp-medium: 60em;
+  $bp-large: 80em;
+
+  // Vertical
+  
+  // Media Query Logic
+
+  @mixin responsive($breakpoint) {
+   @if $breakpoint == bp-small {
+     @media only screen and (min-width: $bp-small) {
+       @content; 
+     }
+   }
+    
+   @else if $breakpoint == bp-medium {
+     @media only screen and (min-width: $bp-medium) {
+       @content; 
+     }
+   }
+
+   @else if $breakpoint == bp-large {
+     @media only screen and (min-width: $bp-large) {
+       @content; 
+     }
+   }
+  }
