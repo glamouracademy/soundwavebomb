@@ -16,9 +16,11 @@
 var canvas = document.getElementById( "wavedisplay" );
 
 var doGetSound = function() {
+    $('#wavedisplay').removeClass('initial');
     var context = new AudioContext(); // Create and Initialize the Audio Context
     var getSound = new XMLHttpRequest(); // Load the Sound with XMLHttpRequest
     getSound.open("GET", prompt('Enter a url to load a sound file' ,"http://imreallyawesome.com/awesome/interlude-weirdness-dillyfloop.wav"), true); // Path to Audio File
+    $('body').animate({scrollTop:0});
     getSound.responseType = "arraybuffer"; // Read as Binary Data
     getSound.onload = function() {
         context.decodeAudioData(getSound.response, function(buffer) {
