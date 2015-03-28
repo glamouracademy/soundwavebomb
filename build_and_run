@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+cd "$(dirname "$0")"
+
+npm i
+
+npm i gulp -g
+
+bundle install
+
+ruby config.ru
