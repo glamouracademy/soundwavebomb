@@ -29,8 +29,8 @@ var drawers = {
         context.beginPath();
         svgc.beginPath();
 
-        context.moveTo(0, height / 2);
-        svgc.moveTo(0, height / 2);
+        context.moveTo(0, amp);
+        svgc.moveTo(0, amp);
 
         for(var i = 0; i < width; i += inc * spacing){
             var min = 1.0;
@@ -54,7 +54,7 @@ var drawers = {
         context.lineTo(width, height / 2);
         svgc.lineTo(width, height / 2);
 
-        for(var i = width; i > 0; i -= inc * spacing){
+        for(var i = width - 1; i >= 0; i -= inc * spacing){
             var min = 1.0;
             var max = -1.0;
             for (j=0; j<step; j++) {
