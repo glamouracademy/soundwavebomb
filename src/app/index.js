@@ -5,10 +5,10 @@ canvas.height = window.innerHeight - 400;
 
 var context2 = canvas.getContext('2d');
 var context  = new C2S(500, 500);
-var centerX  = canvas.width / 2;
-var centerY  = canvas.height / 2;
-var radius   = 70;
 
+var actx = new (window.AudioContext || window.webkitAudioContext)();
+
+// this needs to be optimized
 var doStuffWithContexts = function() {
   if (arguments[0] === 'set') {
     context[arguments[0]] = arguments[1];
@@ -21,15 +21,14 @@ var doStuffWithContexts = function() {
 };
 
 var updateTextArea = function() {
-  var res = context.getSerializedSvg();
-  res = '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n' +
-        '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n' +
-        res;
-  $('#value').val(res);
+  $('#value').val(
+    '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n' +
+    '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n' +
+    context.getSerializedSvg()
+  );
 };
 
-var actx = new (window.AudioContext || window.webkitAudioContext)();
-navigator.webkitGetUserMedia({audio:true}, function(stream) {
+var main = function(stream) {
   var input    = actx.createMediaStreamSource(stream);
   var analyser = actx.createAnalyser();
 
@@ -60,7 +59,6 @@ navigator.webkitGetUserMedia({audio:true}, function(stream) {
     updateTextArea();
     requestAnimationFrame(loop);
   });
+};
 
-}, function() {
-  alert('bad browser');
-});
+navigator.webkitGetUserMedia({audio:true}, main, function() { alert('bad browser'); });
