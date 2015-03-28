@@ -1,9 +1,23 @@
-section {
-  min-height: 100%;
-  border-bottom: 1px solid #000;
-  overflow: hidden;
+html {
   background: url('/assets/images/bg-gradient.png') no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+section {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+
+.sound-upload {
+
+  .content-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50vh;
+  }
 }
 
 
@@ -16,7 +30,7 @@ section {
     margin: 0 auto;
     text-align: center;
     margin-top: 70vh;
-    
+
   }
 
   h2 {
@@ -41,6 +55,7 @@ section {
 
 }
 
+
 nav {
   position: fixed;
   top: 50px;
@@ -60,10 +75,10 @@ nav {
     text-decoration: none;
   }
 
-  a:hover {
+  a:hover, a.active {
     color: $color-blue;
   }
-  
+
   .logo {
     margin-bottom: -15px;
     margin-right: 20px;
@@ -87,7 +102,7 @@ nav {
   #controls {
   }
 
-  #record { 
+  #record {
 
   }
 
@@ -98,18 +113,18 @@ nav {
 
  }
 
-  #save { 
+  #save {
 
   }
 
-  #save[download] { 
+  #save[download] {
 
   }
 
   .viz {
     margin-top: 20vh;
   }
-  
+
 
   .record-controls {
     max-width: 70%;
@@ -139,11 +154,12 @@ nav {
 
 .upload {
   display: block;
-  margin-top: 30px;
+  margin-top: -30px;
 }
 
 .number-alt {
   font-size: 12px;
+  margin-left: -30px;
 }
 
 button, select {
@@ -167,10 +183,15 @@ button, select {
     color: white;
   }
 
-  &.button-record {
+  &.button-record, &.button-upload {
     background-color: $color-blue;
     border-color: $color-blue;
     color: white;
+  }
+
+  &.button-upload {
+    font-size: 25px;
+    padding: 15px 70px;
   }
 
   &.recording {
@@ -222,5 +243,50 @@ form {
   iframe {
     width: 100%;
     height: 100%;
+  }
+}
+
+
+
+.join-us {
+  .container-container {
+    background: url('/assets/images/cube-farm.jpg') no-repeat right center;
+    background-size: cover;
+  }
+
+  .content-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 37vh;
+
+  }
+
+  h2 {
+    font-size: 17px;
+    color: white;
+    background-color: $color-black;
+    padding: 8px 25px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    background-color: $color-black;
+    padding: 6px 15px;
+    display: inline-block;
+    line-height: 10px;
+  }
+
+  .copyright {
+    font-size: 14px;
+    text-align: center;
+    color: $color-black;
+    weight: 400;
+    margin-top: 80px;
   }
 }

@@ -175,3 +175,31 @@ $('nav a').on('click', function (ev) {
 
     $('body').animate({scrollTop: $target.position().top });
 });
+
+function setActiveSection() {
+    var $sections = $('section');
+    var scroll = $('body').scrollTop();
+
+    var set = false;
+
+    $sections.each(function () {
+        var $section = $(this);
+        var $link = $('[href=#' + $section.attr('id') + ']');
+
+        if (set) {
+            $link.removeClass('active');
+        } else {
+            var bottom = $section.position().top + $(this).height();
+            if (scroll < bottom) {
+                set = true;
+                $link.addClass('active');
+            } else {
+                $link.removeClass('active');
+            }
+        }
+
+    });
+}
+
+setActiveSection();
+$(window).on('scroll', setActiveSection);

@@ -64,12 +64,20 @@ html {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400; }
 
+html {
+  background: url("/assets/images/bg-gradient.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; }
+
 section {
   min-height: 100%;
-  border-bottom: 1px solid #000;
-  overflow: hidden;
-  background: url("/assets/images/bg-gradient.png") no-repeat center center;
-  background-size: cover; }
+  overflow: hidden; }
+
+.sound-upload .content-container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50vh; }
 
 .sound-visualization {
   background: url("/assets/images/bg-stl.png") no-repeat center center;
@@ -112,7 +120,7 @@ nav {
     text-transform: uppercase;
     color: #4D4E4C;
     text-decoration: none; }
-  nav a:hover {
+  nav a:hover, nav a.active {
     color: #4A90E2; }
   nav .logo {
     margin-bottom: -15px;
@@ -153,10 +161,11 @@ canvas.initial {
 
 .upload {
   display: block;
-  margin-top: 30px; }
+  margin-top: -30px; }
 
 .number-alt {
-  font-size: 12px; }
+  font-size: 12px;
+  margin-left: -30px; }
 
 button, select {
   -webkit-appearance: none;
@@ -176,10 +185,13 @@ button, select {
   button:hover, select:hover {
     background-color: #4D4E4C;
     color: white; }
-  button.button-record, select.button-record {
+  button.button-record, button.button-upload, select.button-record, select.button-upload {
     background-color: #4A90E2;
     border-color: #4A90E2;
     color: white; }
+  button.button-upload, select.button-upload {
+    font-size: 25px;
+    padding: 15px 70px; }
   button.recording, select.recording {
     background-color: red;
     border-color: red; }
@@ -212,5 +224,36 @@ form {
   .container-video iframe {
     width: 100%;
     height: 100%; }
+
+.join-us .container-container {
+  background: url("/assets/images/cube-farm.jpg") no-repeat right center;
+  background-size: cover; }
+.join-us .content-container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 37vh; }
+.join-us h2 {
+  font-size: 17px;
+  color: white;
+  background-color: #4D4E4C;
+  padding: 8px 25px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 20px; }
+.join-us p {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  background-color: #4D4E4C;
+  padding: 6px 15px;
+  display: inline-block;
+  line-height: 10px; }
+.join-us .copyright {
+  font-size: 14px;
+  text-align: center;
+  color: #4D4E4C;
+  weight: 400;
+  margin-top: 80px; }
 
 /*# sourceMappingURL=global.css.map */
