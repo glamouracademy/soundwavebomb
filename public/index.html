@@ -11,7 +11,7 @@
   <script src="assets/js/canvas2svg.js"></script>
   <script src="assets/js/audiodisplay.js"></script>
   <script src="assets/js/recorderjs/recorder.js"></script>
-  <!-- <script src="assets/js/main.js"></script> -->
+<!--   // <script src="assets/js/main.js"></script> -->
   <script src="assets/js/script.js"></script>
   <style>
 
@@ -21,9 +21,9 @@
 <body>
 
 <nav>
-  <h1>Akoustos</h1>
   <a href="#sound-record">Record</a>
   <a href="#sound-visualization">Visualize</a>
+  <img class="logo" src="/assets/images/logo.svg" alt="Akoustos">
   <a href="#sound-printing">Print</a>
   <a href="#join-us">Careers</a>
 </nav>
@@ -33,12 +33,17 @@
     <canvas id="wavedisplay" class="initial" width="1024" height="500"></canvas>
   </div>
   <div id="controls" class="record-controls">
+    <div class="number">1</div>
     <select name="drawer" id="drawer" class="drawer">
-      <option value="default">Select a Style</option>
+      <option selected="" disabled="">Select a Style</option>
+      <option value="default">Bar Town</option>
       <option value="wave">Wave</option>
     </select>
-      <button class="button-record" onclick="toggleRecording(this);">Record a SoundBite</button>
 
+    <div class="number">2</div>
+    <button class="button-record" onclick="toggleRecording(this);">Record a SoundBite</button>
+
+    <div class="number">3</div>
     <form action="/download" method="post">
       <button type="submit">Download .svg</button>
     </form>
@@ -47,9 +52,14 @@
 
 
 <section id="sound-visualization" class="sound-visualization">
-  <div>
-    test
+  <div class="content-container">
+    <h2 class="highlighter">Transform the sound recording to .stl</h2>
+     <p class="highlighter">Lorem ipsum dolor sit amet, consectetur dolor sit amet.</p>
+    <p class="highlighter">Lorem ipsum dolor sit amet,</p>
+    <p class="highlighter">ipsum dolor sit amet, consectetur dolor sit amet.</p>
+    <p class="highlighter">Lorem ipsum dolor sit amet, consectetur.</p>
   </div>
+  
 </section>
 
 <section id="sound-printing" class="sound-printing">

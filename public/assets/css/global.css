@@ -71,15 +71,61 @@ section {
   background: url("/assets/images/bg-gradient.png") no-repeat center center;
   background-size: cover; }
 
+.sound-visualization {
+  background: url("/assets/images/bg-stl.png") no-repeat center center;
+  background-size: cover; }
+  .sound-visualization .content-container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 70vh; }
+  .sound-visualization h2 {
+    font-size: 17px;
+    color: white;
+    background-color: #4D4E4C;
+    padding: 8px 25px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 20px; }
+  .sound-visualization p {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    background-color: #4D4E4C;
+    padding: 6px 15px;
+    display: inline-block;
+    line-height: 10px; }
+
 nav {
   position: fixed;
-  top: 0; }
+  top: 50px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto; }
+  nav h1, nav a {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #4D4E4C;
+    text-decoration: none; }
+  nav a:hover {
+    color: #4A90E2; }
+  nav .logo {
+    margin-bottom: -15px;
+    margin-right: 20px; }
 
 canvas {
   display: inline-block;
   background: transparent;
   width: 100%;
   height: 50vh; }
+
+canvas.initial {
+  background: url(/assets/images/default_audio.png) no-repeat center center;
+  background-size: cover; }
 
 .viz {
   margin-top: 20vh; }
@@ -91,6 +137,19 @@ canvas {
 
 .drawer, .button-record {
   margin-right: 5%; }
+
+.number {
+  display: inline-block;
+  border: solid 4px #4D4E4C;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 33px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #4D4E4C;
+  margin-right: 20px; }
 
 button, select {
   -webkit-appearance: none;
@@ -114,6 +173,12 @@ button, select {
     background-color: #4A90E2;
     border-color: #4A90E2;
     color: white; }
+  button.recording, select.recording {
+    background-color: red;
+    border-color: red; }
+
+select {
+  background: url("/assets/images/triangle.svg") no-repeat 90% center; }
 
 form {
   display: inline-block; }
