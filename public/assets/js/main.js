@@ -22,7 +22,9 @@ var doGetSound = function() {
     getSound.responseType = "arraybuffer"; // Read as Binary Data
     getSound.onload = function() {
         context.decodeAudioData(getSound.response, function(buffer) {
-            drawBuffer(canvas.width, canvas.height, canvas.getContext('2d'), buffer.getChannelData(0));
+            var ccontext = canvas.getContext('2d');
+            ccontext.clearRect(0, 0, canvas.width, canvas.height);
+            drawBuffer(canvas.width, canvas.height, ccontext, buffer.getChannelData(0));
         });
     }
     getSound.send(); // Send the Request and Load the File, give it a moment to load

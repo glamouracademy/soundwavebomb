@@ -1,7 +1,7 @@
 var inc      = 15;     // width of the bars
 var spacing  = 1.2;  // spacing factor between bars
 var fraction = 4;   // fraction of width for connecting bars
-var heightOfMiddleLine = 10;
+var heightOfMiddleLine = 15;
 
 var getSvg = function(svgc) {
     return '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n' +
