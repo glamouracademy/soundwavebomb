@@ -1,9 +1,23 @@
-section {
-  min-height: 100%;
-  border-bottom: 1px solid #000;
-  overflow: hidden;
+html {
   background: url('/assets/images/bg-gradient.png') no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+section {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+
+.sound-upload {
+
+  .content-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50vh;
+  }
 }
 
 
@@ -40,6 +54,7 @@ section {
   }
 
 }
+
 
 nav {
   position: fixed;
@@ -139,11 +154,12 @@ nav {
 
 .upload {
   display: block;
-  margin-top: 30px;
+  margin-top: -30px;
 }
 
 .number-alt {
   font-size: 12px;
+  margin-left: -30px;
 }
 
 button, select {
@@ -167,10 +183,15 @@ button, select {
     color: white;
   }
 
-  &.button-record {
+  &.button-record, &.button-upload {
     background-color: $color-blue;
     border-color: $color-blue;
     color: white;
+  }
+
+  &.button-upload {
+    font-size: 25px;
+    padding: 15px 70px;
   }
 
   &.recording {
