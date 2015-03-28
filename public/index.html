@@ -6,6 +6,12 @@
   <title>Audio Recorder</title>
 
   <link rel="stylesheet" type="text/css" href="assets/css/global.css">
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/canvas2svg.js"></script>
+  <script src="assets/js/audiodisplay.js"></script>
+  <script src="assets/js/recorderjs/recorder.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/script.js"></script>
   <style>
 
 
@@ -34,7 +40,7 @@
     </select>
 
     <div class="number">2</div>
-    <button class="button-record" onclick="toggleRecording(this);">Record a SoundBite</button>
+    <button class="button-record" onclick="toggleRecording(this);"><span class="record-start">Record a SoundBite</span><span class="record-stop">Stop Recording</span></button>
 
     <div class="number">3</div>
     <form action="/download" method="post">
@@ -59,7 +65,7 @@
 
 <section id="sound-printing" class="sound-printing">
   <div>
-    test
+    
   </div>
 </section>
 

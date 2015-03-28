@@ -132,7 +132,7 @@ canvas.initial {
 
 .record-controls {
   max-width: 70%;
-  margin: 0 auto;
+  margin: 30px auto 0;
   text-align: center; }
 
 .drawer, .button-record {
@@ -165,7 +165,7 @@ button, select {
   font-weight: 900;
   color: #4D4E4C;
   cursor: pointer;
-  text-align: left; }
+  text-align: center; }
   button:hover, select:hover {
     background-color: #4D4E4C;
     color: white; }
@@ -178,7 +178,15 @@ button, select {
     border-color: red; }
 
 select {
-  background: url("/assets/images/triangle.svg") no-repeat 90% center; }
+  background: url("/assets/images/triangle.svg") no-repeat 90% center;
+  text-align: left; }
+
+.button-record .record-stop {
+  display: none; }
+.button-record.recording .record-stop {
+  display: block; }
+.button-record.recording .record-start {
+  display: none; }
 
 form {
   display: inline-block; }

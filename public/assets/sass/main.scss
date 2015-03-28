@@ -113,7 +113,7 @@ nav {
 
   .record-controls {
     max-width: 70%;
-    margin: 0 auto;
+    margin: 30px auto 0;
     text-align: center;
   }
 
@@ -151,7 +151,7 @@ button, select {
   font-weight: 900;
   color: $color-black;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
 
   &:hover {
     background-color: $color-black;
@@ -172,9 +172,24 @@ button, select {
 
 select {
     background: url('/assets/images/triangle.svg') no-repeat 90% center;
+    text-align: left;
 }
 
+.button-record {
+  .record-stop {
+    display: none;
+  }
 
+  &.recording {
+    .record-stop {
+      display: block;
+    }
+
+    .record-start {
+      display: none;
+    }
+  }
+}
 
 
 form {
