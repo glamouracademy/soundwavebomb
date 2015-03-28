@@ -165,3 +165,13 @@ function initAudio() {
 }
 
 window.addEventListener('load', initAudio );
+
+
+$('nav a').on('click', function (ev) {
+    ev.preventDefault();
+
+    var targetId = $(this).attr('href');
+    var $target = $(targetId);
+
+    $('body').animate({scrollTop: $target.position().top });
+});
