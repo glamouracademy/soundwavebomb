@@ -72,7 +72,9 @@
   <div id="controls">
     <img id="record" src="img/1.png" onclick="toggleRecording(this);">
     <div><img style="width:100px; height:100px" id="canvas-to-svg-button" src="img/2.jpg" onclick="doCanvasToSvg(this);"></div>
-
+    <select name="drawer" id="drawer">
+      <option value="default">Default</option>
+    </select>
     <form action="/download" method="post">
       <textarea type="text" name="val" id="val"></textarea>
       <button type="submit">Submit</button>
