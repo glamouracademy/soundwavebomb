@@ -6,6 +6,6 @@ end
 
 post '/download' do
   content_type('image/svg+xml')
-  attachment('_______file.svg')
+  attachment('akoustos.svg')
   params[:val]
 end
