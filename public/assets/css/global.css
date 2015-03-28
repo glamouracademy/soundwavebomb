@@ -60,14 +60,62 @@ html {
 body {
   height: 100%; }
 
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; }
+
 section {
   min-height: 100%;
-  border-bottom: 1px solid #000; }
+  border-bottom: 1px solid #000;
+  overflow: hidden;
+  background: url("/assets/images/bg-gradient.png") no-repeat center center;
+  background-size: cover; }
+
+nav {
+  position: fixed;
+  top: 0; }
 
 canvas {
   display: inline-block;
   background: transparent;
   width: 100%;
-  height: 40%; }
+  height: 50vh; }
+
+.viz {
+  margin-top: 20vh; }
+
+.record-controls {
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: center; }
+
+.drawer, .button-record {
+  margin-right: 5%; }
+
+button, select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: solid 4px #4D4E4C;
+  padding: 8px;
+  outline: none;
+  background-color: white;
+  min-width: 200px;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: 900;
+  color: #4D4E4C;
+  cursor: pointer;
+  text-align: left; }
+  button:hover, select:hover {
+    background-color: #4D4E4C;
+    color: white; }
+  button.button-record, select.button-record {
+    background-color: #4A90E2;
+    border-color: #4A90E2;
+    color: white; }
+
+form {
+  display: inline-block; }
 
 /*# sourceMappingURL=global.css.map */

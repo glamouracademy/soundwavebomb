@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+ <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Audio Recorder</title>
 
@@ -10,7 +11,7 @@
   <script src="assets/js/canvas2svg.js"></script>
   <script src="assets/js/audiodisplay.js"></script>
   <script src="assets/js/recorderjs/recorder.js"></script>
-  <script src="assets/js/main.js"></script>
+  <!-- <script src="assets/js/main.js"></script> -->
   <script src="assets/js/script.js"></script>
   <style>
 
@@ -28,16 +29,15 @@
 </nav>
 
 <section id="sound-record" class="sound-record">
-  <div id="viz">
+  <div id="viz" class="viz">
     <canvas id="wavedisplay" class="initial" width="1024" height="500"></canvas>
   </div>
-  <div id="controls">
-
-    <select name="drawer" id="drawer">
+  <div id="controls" class="record-controls">
+    <select name="drawer" id="drawer" class="drawer">
       <option value="default">Select a Style</option>
       <option value="wave">Wave</option>
     </select>
-      <button onclick="toggleRecording(this);">Record a SoundBite</button>
+      <button class="button-record" onclick="toggleRecording(this);">Record a SoundBite</button>
 
     <form action="/download" method="post">
       <button type="submit">Download .svg</button>
