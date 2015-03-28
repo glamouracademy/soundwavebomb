@@ -30,7 +30,7 @@ section {
     margin: 0 auto;
     text-align: center;
     margin-top: 70vh;
-    
+
   }
 
   h2 {
@@ -75,10 +75,10 @@ nav {
     text-decoration: none;
   }
 
-  a:hover {
+  a:hover, a.active {
     color: $color-blue;
   }
-  
+
   .logo {
     margin-bottom: -15px;
     margin-right: 20px;
@@ -102,7 +102,7 @@ nav {
   #controls {
   }
 
-  #record { 
+  #record {
 
   }
 
@@ -113,18 +113,18 @@ nav {
 
  }
 
-  #save { 
+  #save {
 
   }
 
-  #save[download] { 
+  #save[download] {
 
   }
 
   .viz {
     margin-top: 20vh;
   }
-  
+
 
   .record-controls {
     max-width: 70%;
