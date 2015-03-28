@@ -32,13 +32,15 @@
     <canvas id="wavedisplay" width="1024" height="500"></canvas>
   </div>
   <div id="controls">
-    <button onclick="toggleRecording(this);">Button</button>
-    <!-- <select name="drawer" id="drawer">
-      <option value="default">Default</option>
+
+    <select name="drawer" id="drawer">
+      <option value="default">Select a Style</option>
       <option value="wave">Wave</option>
-    </select> -->
+    </select>
+      <button onclick="toggleRecording(this);">Record a SoundBite</button>
+
     <form action="/download" method="post">
-      <button type="submit">Submit</button>
+      <button type="submit">Download .svg</button>
     </form>
   </div>
 </section>

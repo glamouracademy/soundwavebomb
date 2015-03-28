@@ -90,8 +90,8 @@ var drawers = {
         var step = Math.ceil(data.length / width);
         var amp  = height / 2;
 
-        context.fillStyle = "#FFFFFF";
-        svgc.fillStyle    = "#FFFFFF";
+        context.fillStyle = "#000000";
+        svgc.fillStyle    = "#000000";
 
         context.clearRect(0, 0, width, height);
 
