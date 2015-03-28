@@ -245,3 +245,48 @@ form {
     height: 100%;
   }
 }
+
+
+
+.join-us {
+  .container-container {
+    background: url('/assets/images/cube-farm.jpg') no-repeat right center;
+    background-size: cover;
+  }
+
+  .content-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 37vh;
+
+  }
+
+  h2 {
+    font-size: 17px;
+    color: white;
+    background-color: $color-black;
+    padding: 8px 25px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    background-color: $color-black;
+    padding: 6px 15px;
+    display: inline-block;
+    line-height: 10px;
+  }
+
+  .copyright {
+    font-size: 14px;
+    text-align: center;
+    color: $color-black;
+    weight: 400;
+    margin-top: 80px;
+  }
+}

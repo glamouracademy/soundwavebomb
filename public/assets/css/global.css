@@ -61,7 +61,7 @@ body {
   height: 100%; }
 
 html {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400; }
 
 html {
@@ -90,7 +90,7 @@ section {
   .sound-visualization h2 {
     font-size: 17px;
     color: white;
-    background-color: #4d4e4c;
+    background-color: #4D4E4C;
     padding: 8px 25px;
     display: inline-block;
     font-weight: 600;
@@ -99,7 +99,7 @@ section {
     font-size: 14px;
     font-weight: 400;
     color: white;
-    background-color: #4d4e4c;
+    background-color: #4D4E4C;
     padding: 6px 15px;
     display: inline-block;
     line-height: 10px; }
@@ -118,10 +118,10 @@ nav {
     font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #4d4e4c;
+    color: #4D4E4C;
     text-decoration: none; }
   nav a:hover, nav a.active {
-    color: #4a90e2; }
+    color: #4A90E2; }
   nav .logo {
     margin-bottom: -15px;
     margin-right: 20px; }
@@ -148,7 +148,7 @@ canvas.initial {
 
 .number {
   display: inline-block;
-  border: solid 4px #4d4e4c;
+  border: solid 4px #4D4E4C;
   border-radius: 20px;
   width: 40px;
   height: 40px;
@@ -156,7 +156,7 @@ canvas.initial {
   line-height: 33px;
   font-size: 18px;
   font-weight: 900;
-  color: #4d4e4c;
+  color: #4D4E4C;
   margin-right: 20px; }
 
 .upload {
@@ -171,7 +171,7 @@ button, select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: solid 4px #4d4e4c;
+  border: solid 4px #4D4E4C;
   padding: 8px;
   outline: none;
   background-color: white;
@@ -179,15 +179,15 @@ button, select {
   border-radius: 7px;
   font-size: 17px;
   font-weight: 900;
-  color: #4d4e4c;
+  color: #4D4E4C;
   cursor: pointer;
   text-align: center; }
   button:hover, select:hover {
-    background-color: #4d4e4c;
+    background-color: #4D4E4C;
     color: white; }
   button.button-record, button.button-upload, select.button-record, select.button-upload {
-    background-color: #4a90e2;
-    border-color: #4a90e2;
+    background-color: #4A90E2;
+    border-color: #4A90E2;
     color: white; }
   button.button-upload, select.button-upload {
     font-size: 25px;
@@ -224,3 +224,36 @@ form {
   .container-video iframe {
     width: 100%;
     height: 100%; }
+
+.join-us .container-container {
+  background: url("/assets/images/cube-farm.jpg") no-repeat right center;
+  background-size: cover; }
+.join-us .content-container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 37vh; }
+.join-us h2 {
+  font-size: 17px;
+  color: white;
+  background-color: #4D4E4C;
+  padding: 8px 25px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 20px; }
+.join-us p {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  background-color: #4D4E4C;
+  padding: 6px 15px;
+  display: inline-block;
+  line-height: 10px; }
+.join-us .copyright {
+  font-size: 14px;
+  text-align: center;
+  color: #4D4E4C;
+  weight: 400;
+  margin-top: 80px; }
+
+/*# sourceMappingURL=global.css.map */
