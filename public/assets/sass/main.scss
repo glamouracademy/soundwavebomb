@@ -290,3 +290,22 @@ form {
     margin-top: 80px;
   }
 }
+
+
+.taglines {
+  text-align: center;
+  width: 100%;
+
+  .content-container {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50vh;
+    font-size: 17px;
+    color: white;
+    background-color: $color-black;
+    padding: 8px 25px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+}

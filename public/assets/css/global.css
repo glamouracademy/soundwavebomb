@@ -256,4 +256,19 @@ form {
   weight: 400;
   margin-top: 80px; }
 
+.taglines {
+  text-align: center;
+  width: 100%; }
+  .taglines .content-container {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50vh;
+    font-size: 17px;
+    color: white;
+    background-color: #4D4E4C;
+    padding: 8px 25px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 20px; }
+
 /*# sourceMappingURL=global.css.map */
