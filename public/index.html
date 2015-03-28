@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+ <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Audio Recorder</title>
 
@@ -13,26 +14,32 @@
 <body>
 
 <nav>
-  <h1>Akoustos</h1>
   <a href="#sound-record">Record</a>
   <a href="#sound-visualization">Visualize</a>
+  <img class="logo" src="/assets/images/logo.svg" alt="Akoustos">
   <a href="#sound-printing">Print</a>
   <a href="#join-us">Careers</a>
 </nav>
 
 <section id="sound-record" class="sound-record">
-  <div id="viz">
-    <canvas id="wavedisplay" width="1024" height="500"></canvas>
+  <div id="viz" class="viz">
+    <canvas id="wavedisplay" class="initial" width="1024" height="500"></canvas>
   </div>
-  <div id="controls">
-    <button onclick="toggleRecording(this);">Button</button>
-    <!-- <select name="drawer" id="drawer">
-      <option value="default">Default</option>
+  <div id="controls" class="record-controls">
+    <div class="number">1</div>
+    <select name="drawer" id="drawer" class="drawer">
+      <option selected="" disabled="">Select a Style</option>
+      <option value="default">Bar Town</option>
       <option value="wave">Wave</option>
-    </select> -->
+    </select>
+
+    <div class="number">2</div>
+    <button class="button-record" onclick="toggleRecording(this);">Record a SoundBite</button>
+
+    <div class="number">3</div>
     <form action="/download" method="post">
       <textarea name="val" id="val" style="display:none"></textarea>
-      <button type="submit">Submit</button>
+      <button type="submit">Download .svg</button>
     </form>
     <button onclick="doGetSound()">Upload</button>
   </div>
@@ -40,9 +47,14 @@
 
 
 <section id="sound-visualization" class="sound-visualization">
-  <div>
-    test
+  <div class="content-container">
+    <h2 class="highlighter">Transform the sound recording to .stl</h2>
+     <p class="highlighter">Lorem ipsum dolor sit amet, consectetur dolor sit amet.</p>
+    <p class="highlighter">Lorem ipsum dolor sit amet,</p>
+    <p class="highlighter">ipsum dolor sit amet, consectetur dolor sit amet.</p>
+    <p class="highlighter">Lorem ipsum dolor sit amet, consectetur.</p>
   </div>
+
 </section>
 
 <section id="sound-printing" class="sound-printing">

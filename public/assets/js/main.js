@@ -67,6 +67,9 @@ function doneEncoding( blob ) {
 }
 
 function toggleRecording( e ) {
+    var canvas = document.getElementById( "wavedisplay" );
+    canvas.classList.remove("initial");
+
     if (e.classList.contains("recording")) {
         // stop recording
         audioRecorder.stop();
