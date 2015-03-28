@@ -3,4 +3,8 @@ html
   head
     link(rel="/css/style.css")
   body
+    canvas#canvas
     script(src="/js/script.js")
+    form(action="/endpoint", method="post")
+      input(id="value", type="text", name="val")
+      button(type="submit") Submit

@@ -16,7 +16,7 @@ var paths   = {
   html:   ['src/index.jade'],
   vendor: {
     js: [
-
+      './node_modules/jquery/dist/jquery.js'
     ]
   },
   dest: 'public'
@@ -38,7 +38,7 @@ gulp.task('js', function() {
     gulp.src(paths.js)
   ])
     .pipe(concat('script.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(paths.dest + '/js'));
 });
 

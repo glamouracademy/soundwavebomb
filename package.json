@@ -9,6 +9,7 @@
     "gulp-uglify": "^1.0.2",
     "lodash": "^2.4.1",
     "nodemon": "^1.2.1",
-    "streamee": "^0.5.3"
+    "streamee": "^0.5.3",
+    "jquery": "1.11.2"
   }
 }
